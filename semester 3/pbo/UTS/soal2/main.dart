@@ -5,7 +5,7 @@ void main(List<String> args) {
   print("Masukkan bilangan ganjil lebih  dari 2 : ");
   int? n = int.parse(stdin.readLineSync()!);
   int s = n+2;
-  for (int i = 0; i <= n; i++) {
+  for (int i = 0; i <= n-1; i++) {
     if (i == 1) k = i;
     for (int l = s; l > 0; l--) {
       stdout.write(" ");
@@ -15,7 +15,7 @@ void main(List<String> args) {
     k += 2;
     stdout.writeln();
   }
-  for (int i = 0; i <= n; i++) {
+  for (int i = 0; i <= n-1; i++) {
     for (int l = s; l > 0; l--) stdout.write(" ");
     s += 1;
     for (int j = k; j > 0; j--) stdout.write("*");
