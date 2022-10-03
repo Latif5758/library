@@ -4,6 +4,10 @@ void main(List<String> args) {
   int k = 0;
   print("Masukkan bilangan ganjil lebih  dari 2 : ");
   int? n = int.parse(stdin.readLineSync()!);
+  if (n < 3 || n % 2 == 0) {
+    print("inputan salah");
+    return;
+  }
   int s = n+2;
   for (int i = 0; i <= n-1; i++) {
     if (i == 1) k = i;
