@@ -1,23 +1,33 @@
 import 'dart:io';
-
 void main(List<String> args) {
   int k = 0;
-  print("Masukkan bilangan ganjil lebih  dari 2 : ");
+  print("Masukkan bilangan : ");
   int? n = int.parse(stdin.readLineSync()!);
-  if (n < 3 || n % 2 == 0) {
-    print("inputan salah");
-    return;
-  }
+  print("hasil segitiga inputan $n");
   int s = n;
   for (int i = 0; i <= n; i++) {
     if (i == 1) k = i;
-    for (int l = s; l > 0; l--) {
-      stdout.write(" ");
-    }
+    stdout.write(" "*s);
     s -= 1;
-    for (int j = 0; j < k; j++) stdout.write("*");
+    stdout.write("*"*k);
     k += 2;
-    stdout.writeln();
-  }
+    stdout.writeln();}
+  stdout.writeln();
+  print("hasil jajar genjang inputan $n");
+  k=0;
+  s = n+2;
+  for (int i = 0; i <= n-1; i++) {
+    if (i == 1) k = i;
+    stdout.write(" "*s);
+    s -= 1;
+    stdout.write("*"*k);
+    k += 2;
+    stdout.writeln();}
+  for (int i = 0; i <= n-1; i++) {
+    stdout.write(" "*s);
+    s += 1;
+    stdout.write("*"*k);
+    k -= 2;
+    stdout.writeln();}
   stdout.writeln();
 }
